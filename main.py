@@ -4,6 +4,7 @@ import random
 Screen().bgpic(r"treasureMap.gif")
 setup(451,350) # screen size to match background
 hideturtle()
+pensize(2.5)
 speed(0)
 # Target Area
 # Random target area
@@ -20,8 +21,8 @@ print("welcome to Treasure Hunt\nGood Luck...\n")
 repeat = True
 while repeat == True:
     # Ask user
-    x = int(input("What are the coordinates for the treasure on the x-axis?\nBetween -225 and 225: "))
-    y = int(input("What are the coordinates for the treasure on the y-axis?\nBetween -175 and 175: "))
+    x = int(input("What are the coordinates for the treasure on the x-axis?\nBetween -220 and 220: "))
+    y = int(input("What are the coordinates for the treasure on the y-axis?\nBetween -170 and 170: "))
     print("\nYou dug here",x ,",", y)
     # check for the treasure
     if hit_target(x, y):
