@@ -12,7 +12,6 @@ posY = window_height() // 2
 target_x = random.randint(-posX, posX)
 target_y = random.randint(-posY, posY)
 target_range = 30   # How close they need to be
-print(target_x, target_y)# for me to check the treasure
 # Function to Check Hit (returns a boolean)
 def hit_target(x, y):
     return abs(x - target_x) < target_range and abs(y - target_y) < target_range
