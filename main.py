@@ -1,7 +1,9 @@
 from turtle import *
 import random
 #set up
-setup(480,480)
+Screen().bgpic(r"treasureMap.gif")
+setup(451,350) # screen size to match background
+hideturtle()
 speed(0)
 # Target Area
 # Random target area
@@ -23,8 +25,9 @@ repeat = True
 
 while repeat == True:
     # Ask user
-    x = int(input("What are the coordinates for the treasure on the x-axis\nBetween -240 and 240: "))
-    y = int(input("What are the coordinates for the treasure on the y-axis\nBetween -240 and 240: "))
+    x = int(input("What are the coordinates for the treasure on the x-axis\nBetween -225 and 225: "))
+    y = int(input("What are the coordinates for the treasure on the y-axis\nBetween -175 and 175: "))
+    print("\nYou dug here",x , y)
     # check for the treasure
     if hit_target(x, y):
         print("\nYou found the treasure\n")
