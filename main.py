@@ -21,8 +21,8 @@ print("welcome to Treasure Hunt\nGood Luck...\n")
 repeat = True
 while repeat == True:
     # Ask user
-    x = int(input("What are the coordinates for the treasure on the x-axis\nBetween -225 and 225: "))
-    y = int(input("What are the coordinates for the treasure on the y-axis\nBetween -175 and 175: "))
+    x = int(input("What are the coordinates for the treasure on the x-axis?\nBetween -225 and 225: "))
+    y = int(input("What are the coordinates for the treasure on the y-axis?\nBetween -175 and 175: "))
     print("\nYou dug here",x , y)
     # check for the treasure
     if hit_target(x, y):
