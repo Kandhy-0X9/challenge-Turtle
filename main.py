@@ -23,10 +23,10 @@ while repeat == True:
     # Ask user
     x = int(input("What are the coordinates for the treasure on the x-axis?\nBetween -225 and 225: "))
     y = int(input("What are the coordinates for the treasure on the y-axis?\nBetween -175 and 175: "))
-    print("\nYou dug here",x , y)
+    print("\nYou dug here",x ,",", y)
     # check for the treasure
     if hit_target(x, y):
-        print("You found the treasure\nTreasure was at:", target_x, target_y)
+        print("You found the treasure\nTreasure was at:", target_x,",",target_y)
         penup()
         goto(x, y)
         begin_fill()
