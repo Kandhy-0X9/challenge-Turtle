@@ -1,17 +1,20 @@
 from turtle import *
 import random
 #set up
-Screen().bgpic(r"treasureMap.gif")
-setup(451,350) # screen size to match background
+bgcolor("lightgreen")
+setup(650, 550)
 hideturtle()
 pensize(2.5)
 speed(0)
+# Add treasure map as a centered shape
+addshape("treasure_map.gif")
+shape("treasure_map.gif")
+penup()
+goto(0, 0)
 # Target Area
 # Random target area
-posX = window_width() // 2
-posY = window_height() // 2
-target_x = random.randint(-posX, posX)
-target_y = random.randint(-posY, posY)
+target_x = random.randint(-220, 220)
+target_y = random.randint(-170, 170)
 target_range = 30   # How close they need to be
 # Function to Check Hit (returns a boolean)
 def hit_target(x, y):
