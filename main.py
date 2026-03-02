@@ -5,6 +5,7 @@ bgcolor("lightgreen")
 setup(650, 550)
 pensize(2.5)
 speed(0)
+hideturtle()
 # map
 bgpic(r"TreasureMap.gif")
 # write top
