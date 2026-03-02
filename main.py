@@ -1,17 +1,22 @@
 from turtle import *
 import random
-#set up
+# set up
 bgcolor("lightgreen")
 setup(650, 550)
-hideturtle()
 pensize(2.5)
 speed(0)
-# Add treasure map as a centered shape
-addshape("treasure_map.gif")
-shape("treasure_map.gif")
+# map
+bgpic(r"TreasureMap.gif")
+# write top
 penup()
-goto(0, 0)
-# Target Area
+color("brown")
+goto(0, 230)
+write("Tracy's Treasure Hunt!",align="center",font=("Arial", 26, "bold"))
+# write bottom
+penup()
+color("black")
+goto(0, -250)
+write("Can you find her gold doubloon??",align="center",font=("Arial", 12, "italic"))
 # Random target area
 target_x = random.randint(-220, 220)
 target_y = random.randint(-170, 170)
@@ -24,8 +29,8 @@ print("welcome to Treasure Hunt\nGood Luck...\n")
 repeat = True
 while repeat == True:
     # Ask user
-    x = int(input("What are the coordinates for the treasure on the x-axis?\nBetween -220 and 220: "))
-    y = int(input("What are the coordinates for the treasure on the y-axis?\nBetween -170 and 170: "))
+    x = int(input("What are the coordinates for the treasure on the x-axis?\nMost likely between -220 and 220: "))
+    y = int(input("What are the coordinates for the treasure on the y-axis?\nMOst likely between -170 and 170: "))
     print("\nYou dug here",x ,",", y)
     # check for the treasure
     if hit_target(x, y):
