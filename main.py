@@ -44,7 +44,7 @@ while repeat == True:
     print(target_x, target_y)
     # Ask user
     x = int(textinput("What are the coordinates for the treasure on the x-axis?", "Most likely between -220 and 220: "))
-    y = int(textinput("What are the coordinates for the treasure on the y-axis?", "M0st likely between -170 and 170: "))
+    y = int(textinput("What are the coordinates for the treasure on the y-axis?", "Most likely between -170 and 170: "))
     print("\nYou dug here",x ,",", y)
     # Move Turtle to Guess
 
