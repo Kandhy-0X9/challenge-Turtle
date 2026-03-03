@@ -33,6 +33,7 @@ def treasure_text():
     color("black")
     goto(0, -250)
     write("Can you find her gold doubloon??",align="center",font=("Arial", 12, "italic"))
+    hideturtle()
 def hit_target(x, y):
     return abs(x - target_x) < target_range and abs(y - target_y) < target_range
 
