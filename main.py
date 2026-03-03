@@ -2,7 +2,9 @@ from turtle import *
 import random
 import time
 import os
+import sys
 # set up
+os.system("cls")
 bgcolor("lightgreen")
 setup(650, 550)
 pensize(2.5)
@@ -68,6 +70,7 @@ while repeat == True:
         repeat = False
         if repeat == False:
             break
+            sys.exit()
 
     else:
         hideturtle()
@@ -90,6 +93,7 @@ while repeat == True:
             if backout == "yes":
                 print("\nThe treasure was at", target_x, ",", target_y)
                 break 
+                sys.exit()
             elif backout == "no":
                 continue
             else:
