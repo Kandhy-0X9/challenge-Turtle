@@ -43,7 +43,6 @@ treasure_text()
 repeat = True
 giveup = 0
 while repeat == True:
-    print(target_x, target_y)
     # Ask user
     x = int(textinput("Coordinates on the x-axis", "Most likely between -220 and 220: "))
     y = int(textinput("Coordinates on the y-axis", "Most likely between -170 and 170: "))
@@ -69,8 +68,10 @@ while repeat == True:
         write(":D", font=("Monospace", 12, "italic"))
         repeat = False
         if repeat == False:
-            break
+            time.sleep(5)
+            os.system("cls")
             sys.exit()
+            break
 
     else:
         hideturtle()
@@ -92,8 +93,10 @@ while repeat == True:
             backout = textinput("Giving up?", "Do you want to give up? (yes or no): ")
             if backout == "yes":
                 print("\nThe treasure was at", target_x, ",", target_y)
-                break 
+                time.sleep(5)
+                os.system("cls")
                 sys.exit()
+                break 
             elif backout == "no":
                 continue
             else:
