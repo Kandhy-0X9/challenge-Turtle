@@ -39,6 +39,7 @@ print("welcome to Treasure Hunt\nGood Luck...\n")
 treasureMark()
 treasure_text()
 repeat = True
+giveup = 0
 while repeat == True:
     print(target_x, target_y)
     # Ask user
@@ -82,6 +83,15 @@ while repeat == True:
         color("black")
         write(":(", font=("Monospace", 12, "italic"))    
         time.sleep(2)# Allows you to see your coodinates
+        giveup += 1
+        if giveup == 5:
+            backout = textinput("Giving up?", "Do you want to give up? (yes or no): ")
+            if backout == "yes":
+                print("The treasure was at", target_x, ",", target_y)
+                break
+        else:
+            continue
+
 hideturtle()
 # keep the window open
 done()
