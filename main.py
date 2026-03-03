@@ -43,14 +43,14 @@ giveup = 0
 while repeat == True:
     print(target_x, target_y)
     # Ask user
-    x = int(textinput("What are the coordinates for the treasure on the x-axis?", "Most likely between -220 and 220: "))
-    y = int(textinput("What are the coordinates for the treasure on the y-axis?", "Most likely between -170 and 170: "))
+    x = int(textinput("Coordinates on the x-axis", "Most likely between -220 and 220: "))
+    y = int(textinput("Coordinates on the y-axis", "Most likely between -170 and 170: "))
     print("\nYou dug here",x ,",", y)
     # Move Turtle to Guess
 
     # check for the treasure
     if hit_target(x, y):
-        hideturtle
+        hideturtle()
         print("You found the doubloon!")
         color("black")
         # Move Turtle to Guess
@@ -83,14 +83,17 @@ while repeat == True:
         color("black")
         write(":(", font=("Monospace", 12, "italic"))    
         time.sleep(2)# Allows you to see your coodinates
+        # Give up option after 5 tries
         giveup += 1
         if giveup == 5:
             backout = textinput("Giving up?", "Do you want to give up? (yes or no): ")
             if backout == "yes":
-                print("The treasure was at", target_x, ",", target_y)
-                break
-        else:
-            continue
+                print("\nThe treasure was at", target_x, ",", target_y)
+                break 
+            elif backout == "no":
+                continue
+            else:
+                print("Invalid input, try again.")
 
 hideturtle()
 # keep the window open
