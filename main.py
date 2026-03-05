@@ -71,7 +71,6 @@ while repeat == True:
         if repeat == False:
             time.sleep(5)
             os.system("cls")
-            sys.exit()
             break
 
     else:
@@ -96,7 +95,6 @@ while repeat == True:
                 print("\nThe treasure was at", target_x, ",", target_y)
                 time.sleep(5)
                 os.system("cls")
-                sys.exit()
                 break 
             elif backout == "no":
                 continue
